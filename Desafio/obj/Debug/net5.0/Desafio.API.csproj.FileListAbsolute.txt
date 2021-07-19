@@ -7,6 +7,7 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.API.run
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.API.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\ref\Desafio.API.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.API.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.API.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\BCrypt.Net-Core.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\FluentValidation.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
@@ -62,6 +63,7 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.Common.
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.Repository.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.Service.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.Model.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\Desafio.Model.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\bin\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.csproj.AssemblyReference.cache
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.GeneratedMSBuildEditorConfig.editorconfig
@@ -77,5 +79,6 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.Raz
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.csproj.CopyComplete
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\ref\Desafio.API.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio\obj\Debug\net5.0\Desafio.API.genruntimeconfig.cache

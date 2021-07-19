@@ -14,14 +14,26 @@ namespace Desafio.Service
         /// Busca todos os objetos no banco de dados
         /// </summary>
         /// <returns>Retorna todas as entidades encontradas</returns>
-        IEnumerable<MovieResponse> GetAll(bool active);
+        IEnumerable<MovieResponse> GetAll(bool? active);
         /// <summary>
         /// Busca o objeto que tenha a chava correspondente à solicitada no banco de dados
         /// </summary>
         /// <param name="id">Chave de identificação</param>
         /// <returns>Retorna a entidade encontrada</returns>
         MovieResponse GetById(int id);
-
+        /// <summary>
+        /// Busca o objeto que tenah a propriedade nome igual ou contenha parte do valor
+        /// </summary>
+        /// <param name="name">nome a se verificado</param>
+        /// <returns></returns>
+        IEnumerable<MovieResponse> GetByname(string name, bool? active = true);
+        /// <summary>
+        /// Busca os filmes que tenha algum dos generos listados e tenha o mesmo status
+        /// </summary>
+        /// <param name="genres">generos</param>
+        /// <param name="active">status</param>
+        /// <returns>Lista de filmes</returns>
+        IEnumerable<MovieResponse> GetByGenre(IEnumerable<int> genres, bool? active = true);
         /// <summary>
         /// Insere um objeto ao banco de dados
         /// </summary>

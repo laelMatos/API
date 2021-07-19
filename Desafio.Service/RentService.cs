@@ -243,7 +243,7 @@ namespace Desafio.Service
             }
         }
 
-        public bool Delete(GenreRequest entity)
+        public bool Delete(RentRequest entity)
         {
             throw new NotImplementedException();
         }

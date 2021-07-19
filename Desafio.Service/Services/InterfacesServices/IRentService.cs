@@ -50,7 +50,7 @@ namespace Desafio.Service
         /// </summary>
         /// <param name="entity">objeto a ser Removido</param>
         /// <returns>Confirmação de conclusão da tarefa</returns>
-        bool Delete(GenreRequest entity);
+        bool Delete(RentRequest entity);
         /// <summary>
         /// Remove varios objetos do banco de dados
         /// </summary>

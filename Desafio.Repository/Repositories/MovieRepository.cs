@@ -92,5 +92,27 @@ namespace Desafio.Repository
                 return false;
             }
         }
+
+        public IEnumerable<Movie> GetByGenre(IEnumerable<int> genres, bool? active = true)
+        {
+            string genreSearch = "";
+
+            foreach (var genre in genres.Select((x, i) => new { Index = i, Value = x }))
+            {
+                genreSearch += $"[g].[GenreId] = {genre.Value} ";
+                if (genre.Index < genres.Count()-1)
+                    genreSearch += "OR ";
+            }
+            var status = (bool)active ? 1 : 0;
+            string query = $"SELECT [f].[ID], [f].[Active], [f].[Create_at], [f].[Name], [f].[Update_at] "+
+                            $"FROM [Filmes] AS[f] " +
+                            $"INNER JOIN[GenreMovies] AS[g] ON[f].[ID] = [g].[MovieId] AND " + 
+                            genreSearch +
+                            $" AND [f].[Active] = {status} "+
+                            $"LEFT JOIN[RentMovies] AS[r] ON[f].[ID] = [r].[MovieId] " +
+                            $"ORDER BY[f].[ID], [g].[GenreId], [g].[MovieId], [r].[RentId], [r].[MovieId]";
+
+            return  _DbContext.Movies.FromSqlRaw(query).ToList();
+        }
     }
 }

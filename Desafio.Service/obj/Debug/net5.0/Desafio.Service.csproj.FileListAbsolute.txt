@@ -8,6 +8,7 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\Desafio
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\Desafio.Repository.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\Desafio.Common.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\Desafio.Model.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\Desafio.Model.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\bin\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\obj\Debug\net5.0\Desafio.Service.csproj.AssemblyReference.cache
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Service\obj\Debug\net5.0\Desafio.Service.GeneratedMSBuildEditorConfig.editorconfig

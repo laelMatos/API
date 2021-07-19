@@ -2,6 +2,7 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.M
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.Model.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\ref\Desafio.Model.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.Model.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.Model.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.Common.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\Desafio.Common.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\bin\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
@@ -13,4 +14,5 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\Desafio.M
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\Desafio.Model.csproj.CopyComplete
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\Desafio.Model.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\ref\Desafio.Model.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\Desafio.Model.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Model\obj\Debug\net5.0\Desafio.Model.pdb

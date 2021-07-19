@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Desafio.Repository
 {
+    /// <summary>
+    /// Repositorio gênero
+    /// </summary>
     public class GenreRepository
     {
         private DataContextMySql _DbContext;
@@ -36,7 +39,7 @@ namespace Desafio.Repository
 
                 return entity;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

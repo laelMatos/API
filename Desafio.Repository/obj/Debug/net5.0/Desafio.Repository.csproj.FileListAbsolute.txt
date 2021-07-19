@@ -7,6 +7,7 @@ D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desa
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desafio.Common.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desafio.Model.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desafio.Model.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desafio.Model.xml
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\Desafio.Common.pdb
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\bin\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
 D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Repository\obj\Debug\net5.0\Desafio.Repository.csproj.AssemblyReference.cache

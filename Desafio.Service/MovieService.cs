@@ -29,7 +29,7 @@ namespace Desafio.Service
             GENRE_MOVIE_REPOS = genericRepos;
         }
 
-        public IEnumerable<MovieResponse> GetAll(bool active)
+        public IEnumerable<MovieResponse> GetAll(bool? active = true)
         {
             try
             {
@@ -54,11 +54,19 @@ namespace Desafio.Service
 
         }
 
-        public IEnumerable<MovieResponse> GetAllOrByParam(string name, bool? active = true)
+        public IEnumerable<MovieResponse> GetByGenre(IEnumerable<int> genre, bool? active = true)
         {
+            if (genre.Count() == 0)
+                return null;
+
             try
             {
-                var listMovies = MOVIE_REPOS.GetByParam(x => x.Active == active || x.Name.ToLower().Contains(name));
+                var listMovies = MOVIE_REPOS.GetByGenre(genre, active);
+
+                if (listMovies.Count() == 0)
+                    return null;
+                //Atuaza e busca a lista de gêneros
+                listMovies = MOVIE_REPOS.GetByParam(x=> listMovies.Any(m=>m.ID == x.ID));
 
                 var genreDb = GENRE_REPOS.GetByParam(x => listMovies.Any(m => m.GenreMovies.Any(g => g.GenreId == x.ID)));
 
@@ -73,36 +81,7 @@ namespace Desafio.Service
 
                 return SetListMovieResponse(listMovies);
             }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public IEnumerable<MovieResponse> GetByGenre(IEnumerable<int> genre, bool active)
-        {
-            try
-            {
-                var listMovies = MOVIE_REPOS.GetByParam(
-                        //filtra pelo status
-                        x => x.Active == active &&
-                        //filtra pelo genero listado
-                        genre.Any(gen => x.RentMovies.Any(ren => ren.RentId == gen)));
-
-                var genreDb = GENRE_REPOS.GetByParam(x => listMovies.Any(m => m.GenreMovies.Any(g => g.GenreId == x.ID)));
-
-                foreach (var item in listMovies.Select(x => x.GenreMovies))
-                {
-                    foreach (var gmov in item)
-                    {
-                        gmov.Genre = genreDb.Where(g => g.ID == gmov.GenreId).First();
-                    }
-
-                }
-
-                return SetListMovieResponse(listMovies);
-            }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -130,6 +109,34 @@ namespace Desafio.Service
             {
                 throw;
             }           
+        }
+
+        public IEnumerable<MovieResponse> GetByname(string name, bool? active = true)
+        {
+            try
+            {
+                var listMovies = MOVIE_REPOS.GetByParam(x=>x.Name.ToLower().Contains(name) && x.Active == active);
+                
+                if (listMovies == null)
+                    return null;
+
+                var genreDb = GENRE_REPOS.GetByParam(x => listMovies.Any(m => m.GenreMovies.Any(g => g.GenreId == x.ID)));
+
+                foreach (var item in listMovies.Select(x => x.GenreMovies))
+                {
+                    foreach (var gmov in item)
+                    {
+                        gmov.Genre = genreDb.Where(g => g.ID == gmov.GenreId).First();
+                    }
+
+                }
+
+                return SetListMovieResponse(listMovies);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public MovieResponse Insert(MovieRequest movie)
@@ -209,30 +216,30 @@ namespace Desafio.Service
             }
         }
 
-        public MovieResponse Update(MovieRequest movie)
+        public MovieResponse Update(MovieRequest entity)
         {
             try
             {
-                var movieDb = MOVIE_REPOS.GetById(movie.ID);
+                var movieDb = MOVIE_REPOS.GetById(entity.ID);
 
                 if (movieDb == null)
-                    throw new KeyNotFoundException();
+                    throw new KeyNotFoundException($"O filme com o código {entity.ID} não foi encontrado");
 
-                movieDb.Name = movie.Name;
+                movieDb.Name = entity.Name;
                 movieDb.Update_at = DateTime.Now;
-                movieDb.Active = movie.Active!=0;
+                movieDb.Active = entity.Active!=0;
 
-                var genreMovDb = GENRE_MOVIE_REPOS.GetByParam(x=>x.MovieId == movie.ID);
+                var genreMovDb = GENRE_MOVIE_REPOS.GetByParam(x=>x.MovieId == entity.ID);
 
                 //gênero a ser inserido
                 //Validar a necessidade
-                var genreMovInsert = movie.Genre.Where(x => genreMovDb.Any(g => g.GenreId != x));
+                var genreMovInsert = entity.Genre.Where(x => genreMovDb.Any(g => g.GenreId != x));
                 //Gênero a ser removido
-                var genreMovRemove = genreMovDb.Where(x => movie.Genre.Any(g => g != x.GenreId));
+                var genreMovRemove = genreMovDb.Where(x => entity.Genre.Any(g => g != x.GenreId));
                 GENRE_MOVIE_REPOS.DeleteRange(genreMovRemove);
 
                 //Montando o objeto GenreMovie com a lista de ids recebido
-                foreach (var item in movie.Genre)
+                foreach (var item in entity.Genre)
                 {
                     movieDb.GenreMovies.Add(new GenreMovie() { GenreId = item });
                 }
@@ -267,14 +274,14 @@ namespace Desafio.Service
                 var movieDb = MOVIE_REPOS.GetById(entity.ID);
 
                 if (movieDb == null)
-                    throw new KeyNotFoundException("");
+                    throw new KeyNotFoundException($"O filme com o código {entity.ID} não foi encontrado");
 
                 if (movieDb.RentMovies.Count() > 0)
                     throw new BoundContractException($"O filme {entity.Name} tem locação vinculada e não pode ser removido");
 
                 return MOVIE_REPOS.Delete(movieDb);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
@@ -286,7 +293,10 @@ namespace Desafio.Service
             {
                 var movieDb = MOVIE_REPOS.GetByParam(x => entity.Any(m=>m .ID == x.ID && x.Name == m.Name));
                 if (movieDb == null)
-                    throw new KeyNotFoundException();
+                    throw new KeyNotFoundException($"Os filmes listados não foram encontrados");
+
+                if (movieDb.Any(x=>x.RentMovies.Count() > 0))
+                    throw new BoundContractException($"Os filmes listados, tem locação vinculada e não podem ser removido");
 
                 return MOVIE_REPOS.DeleteRange(movieDb);
             }
@@ -339,5 +349,6 @@ namespace Desafio.Service
 
             return movieResp;
         }
+
     }
 }

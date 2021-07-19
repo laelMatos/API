@@ -13,7 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -127,6 +129,10 @@ namespace Desafio
                         new List<string>()
                     }
                 });
+
+                //Mostrar textos da documentação no Swagger
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Desafio.API.xml"));//controller
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Desafio.Model.xml"));//Models
             });
         }
 

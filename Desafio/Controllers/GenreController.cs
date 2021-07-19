@@ -11,6 +11,9 @@ using Desafio.Common.Exceptions;
 
 namespace Desafio.API.Controllers
 {
+    /// <summary>
+    /// Controle responsavel pelas rotas dos gêneros de filmes
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class GenreController : Controller
