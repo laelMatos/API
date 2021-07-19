@@ -1,0 +1,15 @@
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\bin\Debug\net5.0\Desafio.Common.deps.json
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\bin\Debug\net5.0\Desafio.Common.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\bin\Debug\net5.0\ref\Desafio.Common.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\bin\Debug\net5.0\Desafio.Common.pdb
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\bin\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.Resources.StringsTex.pt-BR.resources
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.csproj.GenerateResource.cache
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.AssemblyInfoInputs.cache
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.AssemblyInfo.cs
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.csproj.CoreCompileInputs.cache
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\pt-BR\Desafio.Common.resources.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\ref\Desafio.Common.dll
+D:\Trabalhos\ExactSales\Desafio\Desafio\Desafio.Common\obj\Debug\net5.0\Desafio.Common.pdb
